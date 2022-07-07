@@ -1,0 +1,21 @@
+.foot{
+    height:200px;
+    
+    position: absolute;
+    width:100%;
+    bottom:0px;
+    margin-bottom: 0px;
+    background-color: #1A1F14;
+     
+}
+.footer{
+    color: white;
+    font-size:20px;
+
+}
+.copyright{
+ bottom: 2px;
+ align-items: center;
+position:absolute;
+margin-left: 40%;
+}
