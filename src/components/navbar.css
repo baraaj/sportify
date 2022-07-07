@@ -2,13 +2,25 @@
 .navbar{
     padding:0px 0px 0px 60px;
     height: 60px;  
-   
+     
+}
+.nav-2{
+  background-color: white;
+  color:black;
+}
+.nav-2 a{
+  color: black;
+}
+.nav-2 a:hover{
+  color: black;
 }
 .nav-item{
     margin: 80px;
     font-family: 'Mingzat';
     font-size: 20px;
     font-weight: 600;
+     
+   
 }
 .nav-icon{
   font-size: 1.5rem;

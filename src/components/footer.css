@@ -17,5 +17,17 @@
  bottom: 2px;
  align-items: center;
 position:absolute;
-margin-left: 40%;
+margin-left: 42.5%;
+}
+.social{
+    margin-left:39%;   
+    padding-top: 110px; 
+    
+     
+}
+.social-items{
+    margin:17px; 
+    color:white;
+    font-size: 30px;
+    
 }
