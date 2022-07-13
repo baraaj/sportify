@@ -8,6 +8,12 @@ const Footer = () => {
         
             <div className="foot">
             <div className='footer'> 
+            <div className='contacts'>
+            <div className=''>
+               
+            </div>
+            </div>
+
             <div className='social'>
             <a className="social-items" href="#"><RiFacebookCircleFill/></a>
             <a className="social-items" href="#"><AiFillInstagram /></a>
