@@ -1,36 +1,72 @@
-.foot{
-    height:200px;
-    
-    position: absolute;
-    width:100%;
-    bottom:0px;
-    margin-bottom: 0px;
-    background-color: #1A1F14;
-     
-}
-.footer{
-    color: white;
-    font-size:20px;
 
+.footer-07 {
+overflow-x: hidden;
+width:100%;
+bottom:0;
+background: #1A1F14; 
+padding:50px;
+padding-left: 180px;
+padding-right: 10px;}
+.box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap:4rem
+    
 }
+
+.box-container .box h3{
+    font-size: 1.5rem;
+    color:#fff;
+    padding:15px ;
+    font-family: 'Libre Baskerville', serif;
+}
+.box-container .box{
+    padding-right: 10px;
+}
+.box-container .box a{
+    display: block;
+    font-size: 1.3rem;
+    color:#fff;
+    padding:14px 0;
+    text-decoration: none;
+    padding-left: 10px;
+    font-family: 'Libre Baskerville', serif;
+}
+
+
+.box-container .box  a i{
+   color:#85D236;
+font-size: 25px;
+   padding-left: 1.5rem;
+   padding-right: 1rem;
+ 
+}
+.icons{
+   margin-bottom: 20px;
+   
+}
+.icons i{
+    color:#85D236;
+  font-size:30px;
+  margin-left: 30px;
+  padding:1.5rem
+ }
+
+.icons p{
+    font-family: 'Libre Baskerville', serif;
+    color:#fff;
+    font-size:2rem;
+    animation: flip 2s infinite;
+    animation-delay: calc(.2s * var(--i));
+    margin-left: 26px;
+}
+@keyframes flip {
+    0%,80% {
+      transform: rotateY(360deg) 
+    }}
 .copyright{
- bottom: 2px;
- align-items: center;
-position:absolute;
-margin-left: 42.5%;
-}
-.social{
-    margin-left:39%;   
-    padding-top: 110px; 
-    
-     
-}
-.social-items{
-    margin:17px; 
-    color:white;
-    font-size: 30px;
-    
-}
-.contacts{
+ bottom: 3px;
+
+    color: #fff;
     
 }

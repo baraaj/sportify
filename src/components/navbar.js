@@ -1,14 +1,22 @@
 import React from 'react';
-
 import './navbar.css';
 import {BsFillPersonFill} from 'react-icons/bs';
-import ReactDOM from 'react-dom';
+import {GiTennisBall} from 'react-icons/gi';
+import { useState } from 'react';
 
 const Navbar = () => {
+  const[fix,setfix]=useState(false)
+function setfixed(){
+if(window.scrollY > 80){
+  setfix(true);
+}else{
+ setfix(false);
+}}
+window.addEventListener("scroll",setfixed)
     return (
         <div>
-            <nav className="navbar navbar-expand-lg nav-2">
-  <a className="navbar-brand " href="#">Navbar</a>
+            <nav className= 'navbar nav-2 navbar-expand-lg border-bottom border-secondary'>
+  <a className="navbar-brand" href="#"><i><GiTennisBall style={{color:'#85D236'}}/></i>Sportify</a>
   <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span className="navbar-toggler-icon"></span>
   </button>
@@ -18,7 +26,7 @@ const Navbar = () => {
       <a className="nav-item nav-link" href="#">Salles</a>
       <a className="nav-item nav-link" href="#">Evènements</a>
       <a className="nav-item nav-link" href="#">Contacts</a>
-      <a className="nav-icon nav-item nav-link" href="#"><BsFillPersonFill/></a>
+      <a style={{fontSize:'30px',marginLeft:'180px',Right:0}}className="nav-icon " href="#"><i><BsFillPersonFill/></i></a>
     </div>
   </div>
 </nav>

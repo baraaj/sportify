@@ -1,31 +1,67 @@
 import React from 'react';
 import './footer.css';
-import {FaRegCopyright} from 'react-icons/fa';
-import {RiFacebookCircleFill} from 'react-icons/ri';
-import {AiFillInstagram,AiFillLinkedin,AiFillTwitterCircle} from 'react-icons/ai';
+import {BiCopyright} from 'react-icons/bi';
+import {AiOutlineArrowRight,AiFillInstagram} from 'react-icons/ai'
+import {SiGmail} from 'react-icons/si'
+import {IoLogoWhatsapp} from 'react-icons/io5'
+import {MdLocationPin} from 'react-icons/md'
+import {ImFacebook} from 'react-icons/im'
+import {GrTwitter} from 'react-icons/gr'
 const Footer = () => {
     return (
-        
-            <div className="foot">
-            <div className='footer'> 
-            <div className='contacts'>
-            <div className=''>
-               
-            </div>
-            </div>
 
-            <div className='social'>
-            <a className="social-items" href="#"><RiFacebookCircleFill/></a>
-            <a className="social-items" href="#"><AiFillInstagram /></a>
-            <a className="social-items" href="#"><AiFillLinkedin/></a>
-            <a className="social-items" href="#"><AiFillTwitterCircle/></a>
-            </div> 
-            <div className='copyright'>
-            <span><FaRegCopyright/> Copyrights 2022</span>
-            </div>
-            </div>
-            </div>
-        
+		
+		<section class="footer-07">
+			
+			
+					
+					
+
+                    <div className="box-container">
+
+<div className="box">
+    <h3>Besoin d'aide ?</h3>
+    <a href="#"><i><AiOutlineArrowRight/></i>Contacts</a>
+</div>
+
+<div className="box">
+    <h3>Notre emplacement</h3>
+    <a href="#"><i><MdLocationPin/></i>Tunisie</a>
+</div>
+
+<div className="box">
+    <h3>Liens utiles</h3>
+    <a href="#"><i><AiOutlineArrowRight/></i>Clubs</a>
+    <a href="#"><i><AiOutlineArrowRight/></i>Salles</a>
+    <a href="#"><i><AiOutlineArrowRight/></i>Evènements</a>
+</div>
+
+
+</div>
+					
+				
+			
+                <div class="col-md-10 text-center icons">
+                    <p>Rejoignez-nous sur les réseaux sociaux</p>
+<a href="#"><i><SiGmail/></i></a>
+<a href="#"><i><ImFacebook/></i></a>
+<a href="#"><i><GrTwitter/></i></a>
+<a href="#"><i><AiFillInstagram/></i></a>
+<a href="#"><i><IoLogoWhatsapp/></i></a>
+                </div>
+				<div class="row mt-5">
+					<div class="col-md-10 text-center copyright">
+						
+					<i><BiCopyright/></i>  Copyright 2022 | All rights reserved 
+				
+                    
+					</div>
+				</div>
+		
+		</section>
+		
+
+
     );
 }
 
