@@ -5,11 +5,11 @@ width:100%;
 bottom:0;
 background: #1A1F14; 
 padding:50px;
-padding-left: 180px;
+padding-left: 160px;
 padding-right: 10px;}
 .box-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     gap:4rem
     
 }
