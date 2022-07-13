@@ -2,36 +2,20 @@ import React from "react";
 import Footer from "./footer";
 import Navbar from "./navbar";
 import "./clubs.css";
-
 import { FaSearch } from "react-icons/fa";
 import { useInView } from 'react-intersection-observer';
 import { useEffect } from 'react';
 import {useAnimation} from 'framer-motion';
-import img1 from '../images/received_630585981340841-1024x576.jpg'
+import img1 from '../images/received_630585981340841-1024x576.jpg';
 
 const Clubs = () => {
-    const{ref, inView}=useInView({
-        threshold:0.2
-      });
-      const animation=useAnimation();
-      useEffect(()=>{
-    if (inView){
-      animation.start({
-        x:0,
-        transition:{
-          type:'spring',duration:1,bounce:0.3
-        }
-      });
-    }if (!inView){
-      animation.start({x:'-100vw'})
-    }
-      },[inView]);
+  
   return (
     <div>
       <Navbar />
       <div classNameName="clubs col-md-9 col-md-push-1 ">
         <h3 className="tx text-center">Les Clubs</h3>
-        <div className="clb container">
+         
           <div className="row">
             <div className="col-xs-8 col-xs-offset-2">
               <div className="input-group">
@@ -92,10 +76,15 @@ const Clubs = () => {
             </div>
           </div>
           
-        </div>
+        
          
       </div>
-      
+      <section className="clubs">
+        <div className="clb">
+         <img src={img1} alt="image"/>
+         <button style={{marginLeft:"150px",position:'absolute',top:'280px'}}className="btn ">Détails</button>
+        </div>
+      </section>
       <Footer />
     </div>
   );
