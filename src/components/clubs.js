@@ -7,6 +7,7 @@ import { useInView } from 'react-intersection-observer';
 import { useEffect } from 'react';
 import {useAnimation} from 'framer-motion';
 import img1 from '../images/received_630585981340841-1024x576.jpg';
+import img2 from '../images/karate.jpg';
 
 const Clubs = () => {
   
@@ -55,9 +56,12 @@ const Clubs = () => {
                   <select className="btn btn-default dropdown-toggle"
                     data-toggle="dropdown">
                     <option>Categorie</option>
-                    <option>En Solo</option>
-                    <option>Categorie</option>
-                    <option>Type</option>
+                    <option>Karaté</option>
+                    <option>Judo</option>
+                    <option> taekwondo</option>
+                    <option>kung fu</option>
+                    <option>Gymnastique</option>
+                    <option>kickboxing</option>
                   </select>
                 </div>
                   
@@ -81,7 +85,8 @@ const Clubs = () => {
       </div>
       <section className="clubs">
         <div className="clb">
-         <img src={img1} alt="image"/>
+         <img src={img2} alt="image"/>
+         <h3 style={{marginLeft:"100px",position:'absolute',top:'230px',fontFamily: 'Libre Baskerville serif',fontSize:'30px'}}>Karaté</h3>
          <button style={{marginLeft:"150px",position:'absolute',top:'280px'}}className="btn ">Détails</button>
         </div>
       </section>
