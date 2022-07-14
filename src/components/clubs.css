@@ -2,7 +2,7 @@
 width: 100%;
 height: 500px;
 background-color:white;
- 
+
 
 
 }
@@ -11,7 +11,7 @@ background-color:white;
    
     
     height: 350px;
-    background-color:rgb(65, 23, 23);
+    background-color:rgb(8, 8, 8);
     width:400px;
     padding:50px;
     margin-left: 100px;
@@ -23,7 +23,7 @@ background-color:white;
 }
 .clb img{
     position: relative;
-    top:-100px;
+    top:-90px;
     left: 40px;
     height: 250px;
     width: 350px;
@@ -32,6 +32,13 @@ background-color:white;
 }
 .tx{
     margin-top:40px;
+    color: #85D236;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 40px;
+    font-weight:600;
+    
+    padding:50px;
+    text-transform: uppercase;
 }
 .search{
      
@@ -125,8 +132,7 @@ form input{
 h3{
     font-size: 20px;
     font-weight: 100px;
-    color:#366dd2;
+    color:#f9fbff;
     padding-bottom: 10px;
     
 }
- 
