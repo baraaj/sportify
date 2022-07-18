@@ -3,26 +3,49 @@ import Footer from "./footer";
 import Navbar from "./navbar";
 import "./clubs.css";
 import { FaSearch } from "react-icons/fa";
+import {BiFilter} from "react-icons/bi"
 import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
+import { useEffect ,useState} from "react";
 import { useAnimation } from "framer-motion";
 import img1 from "../images/received_630585981340841-1024x576.jpg";
-import img2 from "../images/karate.jpg";
+import img2 from "../images/josh-calabrese-zcYRw547Dps-unsplash (1).jpg";
 
 const Clubs = () => {
+  const[fix,setfix]=useState(false)
+  function setfixed(){
+ 
+    setfix(true);
+    console.log(fix)
+  
+  }
+  
   return (
-    <div classNameName="clubs  ">
-      <h3 className="tx">Les Clubs</h3>
+    <div className="clubs">
+      <h3 className="tx">Les Catégories</h3>
 
       <div className="row">
-        <div className="col-xs-8 col-xs-offset-2">
-          <div className="input-group">
-            <div className="input-group-btn search-panel">
-              <select
-                id="mystuff"
-                className="search btn btn-default dropdown-toggle"
+      <div>
+            <form class="input-group mb-2 col-md-12">
+            <div class="input-group-append">
+             <button class="btn-3"><span><BiFilter/></span></button>  
+                <select
+                className="btn-2 btn-default dropdown-toggle"
                 data-toggle="dropdown"
               >
+                <option>Catégorie</option>
+                <option>Karaté</option>
+                <option>Judo</option>
+                <option> taekwondo</option>
+                <option>kung fu</option>
+                <option>Gymnastique</option>
+                <option>kickboxing</option>
+              </select>
+              <select
+                id="mystuff"
+                className="btn-2 btn-default dropdown-toggle"
+                data-toggle="dropdown"
+                onChange={e => setfixed(e.target.value)}>
+              
                 <option value="1">Governorat</option>
                 <option value="2">Ariana</option>
                 <option value="3">Béja</option>
@@ -49,35 +72,27 @@ const Clubs = () => {
                 <option value="24">Tunis</option>
                 <option value="25">Zaghouan</option>
               </select>
-            </div>
-            <div className="search input-group-btn search-panel">
               <select
-                className="btn btn-default dropdown-toggle"
+                id="mystuff"
+                className="btn-2 btn-default dropdown-toggle"
                 data-toggle="dropdown"
+                style={fix?{display:'inline-block'}:{display:'none'}}
               >
-                <option>Categorie</option>
-                <option>Karaté</option>
-                <option>Judo</option>
-                <option> taekwondo</option>
-                <option>kung fu</option>
-                <option>Gymnastique</option>
-                <option>kickboxing</option>
+                <option value="1">Région</option>
+              
               </select>
-            </div>
-          </div>
-
-          <div>
-            <form class="input-group mb-3">
+              
+              </div>
               <input
                 type="text"
-                class="text form-control"
+                class=" search-input text form-control"
                 placeholder="Rechercher"
-                aria-label="Saisir email"
+                
                 aria-describedby="basic-addon2"
               />
               <div class="input-group-append">
-                <button class="btn" type="button">
-                  {" "}
+                <button class="btn-search" type="button">
+                  
                   <span>
                     <FaSearch />
                   </span>
@@ -85,7 +100,10 @@ const Clubs = () => {
               </div>
             </form>
           </div>
-        </div>
+     
+
+         
+        
       </div>
       <section className="clubs">
         <div className="clb">
@@ -119,3 +137,4 @@ const Clubs = () => {
 };
 
 export default Clubs;
+ 
