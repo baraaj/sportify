@@ -1,5 +1,4 @@
 
-
 .news{
     overflow-x: hidden;
 }
@@ -15,19 +14,24 @@
    font-family: 'Libre Baskerville', serif;
 }
 .news .article{
-    height: 300px;
+    height: 320px;
     background-color: #fff;
     margin:60px;
    
-   position: relative;
- 
+   display: -ms-flexbox;
+   display: flex;
+   -ms-flex-pack: justify;
+       justify-content: space-between;
+   -ms-flex-align: center;
+       align-items: center;
+       color:#000
    
     
 }
 .news .image{
     height:300px;
     margin-left:60px;
-    width:500px;
+   max-width: 40%;
     position:absolute;
     top: -30px;
     left: 0;
@@ -35,13 +39,16 @@
 .news .title{
     position:absolute;
     right:80px;
-    top:20px;
-    font-size: 30px;
-    width: 700px;
-    padding:60px;
+    top:40px;
+    padding-top:0;
+    font-size: 25px;
+    max-width: 40%;
+    padding-left:60px;
     font-weight: 700;
     text-transform: uppercase;
     font-family: 'Libre Baskerville', serif;
+    color:#000
+  
 }
 .news .description{
     position:absolute;
@@ -58,19 +65,27 @@
     color:#85D236;
 }
 .news .article2{
-    height: 300px;
+    height: 320px;
     background-color: #fff;
     margin:60px;
    
    position: relative;
+   display: -ms-flexbox;
+   display: flex;
+   -ms-flex-pack: justify;
+       justify-content: space-between;
+   -ms-flex-align: center;
+       align-items: center;
+       color:#000
        
    
     
 }
 .news .image2{
+   
     height:300px;
     margin-right:60px;
-    width:500px;
+    max-width:40%;
     position:absolute;
     top: -30px;
     right: 0;
@@ -78,13 +93,15 @@
 .news .title2{
     position:absolute;
     left:80px;
-    top:20px;
-    font-size: 30px;
-    width: 700px;
-    padding:60px;
+    top:60px;
+    font-size: 25px;
+    max-width: 30%;
+    padding-right:60px;
     font-weight: 700;
     text-transform: uppercase;
     font-family: 'Libre Baskerville', serif;
+    max-width:40%;
+    
 }
 .news .description2{
     position:absolute;
@@ -106,14 +123,20 @@
     margin:60px;
    
    position: relative;
-       
+   display: -ms-flexbox;
+   display: flex;
+   -ms-flex-pack: justify;
+       justify-content: space-between;
+   -ms-flex-align: center;
+       align-items: center;
+       color:#000
    
     
 }
 .events .image{
     height:300px;
     margin-left:60px;
-    width:500px;
+    max-width:40%;
     position:absolute;
     top: -30px;
     left: 0;
@@ -127,10 +150,10 @@
 }
 .events .title{
     position:absolute;
-    right:200px;
+    right:0;
     top:20px;
-    font-size: 40px;
-    width: 500px;
+    font-size: 30px;
+    max-width: 40%;
     padding:20px;
   
     font-weight: 900;
@@ -143,4 +166,204 @@
     font-weight: bold;
     
 }
+@media (max-width:991px){
+    .news .title2{
+       top:25px;
+       left:30px;
+        
+    }
+    .news .title{
+        top:-10px;
+        
+         
+     }
+     .events .title{
+       top:-40px
+    }
+   
+   }
+   @media (max-width:500px){
+    .article2 .title2{
+       top:40px;
+       left:30px;
+        width:200px;
+        font-size: 10px;
+    }
+    .news .image2{
+        right:-50px;
+        height: 50%;
+         
+     }
+     .news .article2{
+        
+        height: 200px;
+         
+     }
+    .news .title{
+        top:-10px;
+        
+         
+     }
+     .events .title{
+       top:-40px
+    }
+   
+   }
+   @media (max-width:850px){
+    .events h3{
+        
+        font-size: 30px;
+       
+     }
+     .news h3{
+         
+         font-size: 30px;
+        
+      }
+      .news .title2{
+       font-size: 20px;
+       top:50px;
+       left:50px
+         
+     }
+     .news .title{
+         top:-10px;
+         font-size: 20px;
+          
+      }
+      .events .title{
+        top:-10px;
+        font-size: 23px;
+     }
+
+  
+   }
+   @media (max-width:680px){
+    .events h3{
+        
+        font-size: 30px;
+       
+     }
+     .news h3{
+         
+         font-size: 30px;
+        
+      }
+      .news .title2{
+       font-size: 18px;
+       top:50px;
+       left:20px
+         
+     }
+     .news .title{
+         top:-10px;
+         font-size: 18px;
+          right:28px;
+      }
+      .events .title{
+        top:-10px;
+        font-size: 20px;
+     }
+
+  
+   }
+   @media (max-width:590px){
+    .events h3{
+        
+        font-size: 20px;
+       
+     }
+     .news h3{
+         
+         font-size: 20px;
+        
+      }
+      .news .title2{
+       font-size: 16px;
+       top:50px;
+       left:20px
+         
+     }
+     .news .title{
+         top:-10px;
+         font-size: 16px;
+          right:28px;
+      }
+      .events .title{
+        top:-10px;
+        font-size: 16px;
+     }
+}
+     @media (max-width:550px){
  
+       .news .article{
+            height:200px
+        }
+        .article .image{
+            height:80%;
+            left:-20px
+        }
+        .article .title{
+            font-size: 13px;
+           right:40px
+        }
+        .news .article2{
+            height:200px
+        }
+        .article2 .image2{
+            height:80%;
+            right:-20px
+        }
+        .article2 .title2{
+            font-size: 13px;
+        }
+        .events .title{
+            top:-40px;
+            font-size: 18px;
+        }
+        .events .image{
+            height:80%
+        }
+        .events .article{
+            height: 200px;
+        }
+    }
+    @media (max-width:520px){
+ 
+         .article .title{
+             font-size: 10px;
+           width:90%;
+           left:30%
+         }
+      
+         .article2 .title2{
+             font-size: 10px;
+         }
+         .events .title{
+             top:-40px;
+             font-size: 16px;
+             left:50%
+         }
+       
+         
+     }
+     @media (max-width:420px){
+ 
+        .article .title{
+            font-size: 9px;
+            top:-30px
+        }
+     
+        .article2 .title2{
+            font-size: 9px;
+           top:20px
+        }
+        .events .title{
+         
+            font-size: 12px;
+            left:40%
+          
+        }
+      
+        
+    }

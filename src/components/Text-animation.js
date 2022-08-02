@@ -22,6 +22,7 @@ const animation=keyframes`
 100% {opacity:0; transform:translateY(-100px) skewY(10deg) skewX(10deg) rotateZ(30deg);filter:blur(10px);}
 `
 const Wrapper=styled.span`
+
 display:inline-block;
 span{
 display:inline-block;

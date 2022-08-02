@@ -1,21 +1,33 @@
-import Navbar from "./components/navbar";
-import Clubs from "./components/clubs";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import "jquery/dist/jquery.min.js";
+import "bootstrap/dist/js/bootstrap.min.js";
 import Footer from "./components/footer";
 import Home from "./components/Home";
 import Contacts from "./components/Contacts";
-import Details from "./components/Details";
+import Clubs from "./components/clubs";
+import Navbar from './components/navbar';
+import Club from './components/club';
+import Details from './components/Details';
+import Events from './components/Evènements';
+import Login from './components/Login';
+import Signup from './components/signup';
+import Sidenav from './components/Sidenav';
+import ClubsPage from './components/ClubsPage';
 import {BrowserRouter,Routes,Route} from "react-router-dom";
 function App() {
   return (
     
     <BrowserRouter>
      <Navbar/> 
+    
     <Routes>
-      <Route path="/" element={<Home />} exact ></Route>
-      <Route path="/clubs" element={<Clubs />} exact ></Route>
-      <Route path="/Details" element={<Details />} exact ></Route>
-      <Route path="/Contacts" element={<Contacts />} exact ></Route>
+    <Route path="/" element={<Home/>} exact />
+    <Route path="/contacts" element={<Contacts/>} exact />
+    <Route path="/clubs" element={<Clubs/>} exact />
+    <Route path="/club" element={<Club/>} exact />
+    <Route path="/details" element={<Details/>} exact />
+    <Route path="/events" element={<Events/>} exact />
+    <Route path="/admin" element={<Sidenav/>} exact />
      
     </Routes>
     <Footer/>

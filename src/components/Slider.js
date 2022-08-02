@@ -56,4 +56,3 @@ const Slider = ({ imageSrc, title, subtitle, flipped }) => {
 };
 
 export default Slider;
- 

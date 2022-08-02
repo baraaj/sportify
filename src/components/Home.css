@@ -1,40 +1,43 @@
-.body{
-    background-color: #1A1F14;
- }
+.content{
+   background-color: #1A1F14!important;
  
  
- .Slide{
  
-  background-image: url('../images/victor-freitas-qZ-U9z4TQ6A-unsplash.jpg');
- background-size: cover;
- height:500px}
- 
- .Slide p{
-     font-size: 30px;
-     color:#fff;
-     padding-top: 50px;
-     padding-left: 100px;
-     text-transform: uppercase;
-     font-family: 'Libre Baskerville', serif;
-     width:700px;
-     line-height: 100px;
-     letter-spacing: 0.25rem;
-     font-weight: 500;
-     }
-     .Slide span{
-       color:#85D236;
-       font-weight: 700;
-     }
-  .btn{
-     border-radius: 25px;
-     background-color: #85D236;
-     width:180px;
-     color: #fff;
-     font-family: 'Libre Baskerville', serif;
-     font-size: 25px;
-     font-weight: 300;
-  }
-  .btn:hover{
+}
+
+.Slide{
+
+ background-image: url('');
+background-size: 100% 100%;;
+background-position: center;
+
+background-repeat: no-repeat;
+height:500px;
+display: -ms-flexbox;
+display: flex;
+-ms-flex-pack: justify;
+    justify-content: space-between;
+-ms-flex-align: center;
+    align-items: center;
+}
+
+.Slide p{
+    font-size: 30px;
+    color:#fff;
+    padding-top: 50px;
+    padding-left: 100px;
+    text-transform: uppercase;
+    font-family: 'Libre Baskerville', serif;
+    width:700px;
+    line-height: 100px;
+    letter-spacing: 0.25rem;
+    font-weight: 500;
+    }
+    .Slide span{
+      color:#85D236;
+      font-weight: 700;
+    }
+ .Slide .btn-slide{
     border-radius: 25px;
     background-color: #85D236;
     width:180px;
@@ -42,4 +45,132 @@
     font-family: 'Libre Baskerville', serif;
     font-size: 25px;
     font-weight: 300;
+    left:0;
+    border-color: transparent;
+    margin-bottom: 30px;
  }
+ .btn:hover{
+   border-radius: 25px;
+   background-color: #85D236;
+   width:180px;
+   color: #fff;
+   font-family: 'Libre Baskerville', serif;
+   font-size: 25px;
+   font-weight: 300;
+}
+@media (max-width:991px){
+   
+
+
+}
+
+@media (max-width:850px){
+   .body{
+      overflow-x: hidden;
+   }
+   .Slide{
+      height:500px;
+   }
+   .Slide p{
+      
+         font-size: 18px;
+         color:#fff;
+         padding-top: 10px;
+         padding-left: 60px;
+         text-transform: uppercase;
+         font-family: 'Libre Baskerville', serif;
+         width:500px;
+         line-height: 100px;
+         letter-spacing: 0.25rem;
+         font-weight: 500;
+         }
+         .Slide span{
+           color:#85D236;
+           font-weight: 700;
+         }
+   
+         .Slide .btn-slide{
+            border-radius: 25px;
+            background-color: #85D236;
+            width:180px;
+            color: #fff;
+            font-family: 'Libre Baskerville', serif;
+            font-size: 23px;
+            font-weight: 300;
+            left:0;
+            border-color: transparent;
+            margin-bottom: 30px;
+         }
+         .btn:hover{
+           border-radius: 25px;
+           background-color: #85D236;
+           width:180px;
+           color: #fff;
+           font-family: 'Libre Baskerville', serif;
+           font-size: 25px;
+           font-weight: 300;
+        }
+        .Slide{
+         height:25%
+        }
+
+}
+
+@media (max-width:450px){
+   .body{
+      overflow-x: hidden;
+   }
+}
+@media (max-width:550px){
+   .Slide{
+      height:400px
+   }
+   .SLide p{
+      font-size: 25px;
+      padding:1rem;
+      width:300px
+      
+   }
+   .Slide p{
+      
+      font-size: 14px;
+
+      padding-top: 50px;
+      padding-left: 60px;
+   
+      width:1000px;
+      line-height: 30px;
+      letter-spacing: 0.25rem;
+   
+      }
+      .Slide .btn-slide{
+       
+         width:150px;
+         color: #fff;
+         font-family: 'Libre Baskerville', serif;
+         font-size: 20px;
+         font-weight: 300;
+         left:0;
+         border-color: transparent;
+         margin-bottom: 30px;
+      }
+}
+::-webkit-scrollbar{
+   width:5px;
+  
+   
+}
+::-webkit-scrollbar-thumb{
+   width:5px;
+   border-radius: 30px;
+   background-color: rgb(170, 170, 170);
+   
+}
+::-webkit-scrollbar-thumb:hover{
+   
+   background-color: #444;
+   
+}
+::-webkit-scrollbar-track{
+   background-color: transparent;
+}

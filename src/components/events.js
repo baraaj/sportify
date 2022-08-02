@@ -1,4 +1,3 @@
-
 import React from 'react'
 import './news.css'
 import {motion} from 'framer-motion'
