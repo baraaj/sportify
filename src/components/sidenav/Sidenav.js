@@ -17,7 +17,7 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import CarRepairIcon from '@mui/icons-material/CarRepair';
 import {GiTennisBall} from 'react-icons/gi'
-import { mainListItems, secondaryListItems } from './listitems';
+import { mainListItems, secondaryListItems } from '../listitems';
 
 
 
