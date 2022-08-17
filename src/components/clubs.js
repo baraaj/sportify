@@ -9,13 +9,32 @@ import { useEffect ,useState} from "react";
 import { useAnimation } from "framer-motion";
 import img1 from "../images/1.jpg";
 import img2 from "../images/josh-calabrese-zcYRw547Dps-unsplash (1).jpg";
+import axios from "axios";
+import Card from './Card';
 
 const Clubs = () => {
+  const [clubs,setClub]=useState({});
+   
+  useEffect(()=>{
+     const getClubs=async ()=>{
+      try {
+        const res=await axios.get('/clubs/'
+        
+        );
+       setClub(res.data);
+        //console.log(res.data);
+      } catch (err) {
+        console.log(err);
+      }
+     };
+     getClubs();
+    
+  },);
   const[fix,setfix]=useState(false)
   function setfixed(){
  
     setfix(true);
-    console.log(fix)
+    //console.log(fix)
   
   }
   const [selected, setSelected] = React.useState("");
@@ -582,46 +601,18 @@ const kebili =  [
           </div>
         </div>
       </form>
-      <section className="clubs-section">
-        <div class="row justify-content-start">
-      <div class="col-lg-4 col-md-4 col-sm-8 offset-xs-1">
-                <div class="card-sl" >
-                    <div class="card-image">
-                        <img
-                            src={img1} />
-                    </div>
-
-                 
-                    <div class="card-heading">
-                       Karaté
-                    </div>
-                    
-                  
-                    
-                    <a class="card-button"href="/details"> Détails</a>
-                 
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-2">
-                <div class="card-sl" >
-                    <div class="card-image">
-                        <img
-                            src={img1} />
-                    </div>
-
-                 
-                    <div class="card-heading">
-                       Karaté
-                    </div>
-                    
-                  
-                    
-                    <a class="card-button"href="/details"> Détails</a>
-                 
-                </div>
-            </div>
-           </div>
-      </section>
+      <div className="cards">
+       { clubs.map((club,i)=>
+        {
+          console.log( (clubs[i]));
+ return(
+ [Number(i), clubs[i]]);
+ 
+        }
+     
+       )}
+      
+      </div>
     </div>
   );
 };

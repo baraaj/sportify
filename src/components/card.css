@@ -1,0 +1,106 @@
+.card-sl {
+    background-color: #1A1F14;
+    width: 250px !important;;
+    margin-left: 10px!important;                                      
+    margin-right: 50px!important;
+    margin-bottom: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  .clubs-section{
+    padding-right: 20px;
+  }
+  
+  
+  
+    
+    .card-image img {
+      position: relative;
+      top:-40px;
+      left: 40px;
+      height: 200px;
+      width: 310px;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+    
+    .card-action {
+        position: relative;
+        float: right;
+        margin-top: -25px;
+        margin-right: 20px;
+        z-index: 2;
+        color: #E26D5C;
+        background: #fff;
+        border-radius: 100%;
+        padding: 11px;
+        font-size: 20px;
+       padding-left: 15px;
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.19);
+    }
+    
+    .card-action:hover {
+        color: #fff;
+        background: #E26D5C;
+        -webkit-animation: pulse 1.5s infinite;
+    }
+    
+    .card-heading {
+      background-color: #1A1F14;
+        font-size: 25px;
+        font-weight: bold;
+     height:110px;
+     color: #fff;
+        padding: 20px 45px;
+    }
+    
+    .card-text {
+        padding: 10px 15px;
+        background: #1A1F14;
+        font-size: 14px;
+        color: #636262;
+    }
+    
+    .card-button {
+        display: flex;
+        font-weight: 600;
+        text-decoration: none;
+        justify-content: center;
+        padding: 10px 0;
+        width: 100%;
+        background-color:#85D236 ;
+        color: #fff;
+        border-radius: 0 0 8px 8px;
+    }
+    .card-button:hover {
+      display: flex;
+      font-weight: 600;
+      text-decoration: none;
+      justify-content: center;
+      padding: 10px 0;
+      width: 100%;
+      background-color:#85D236 ;
+      color: #fff;
+      border-radius: 0 0 8px 8px;
+  }
+    
+    .card-action{
+        width:50px;
+        height:50px;
+        align-items: center;
+    }
+    .clubs-section{
+      padding: 120px;
+    }
+    @media screen and (max-width: 433px)  {
+      .tx{
+       
+        font-size: 28px;
+       
+        margin-left: 50px;
+      
+    }
+    
+}
+    
