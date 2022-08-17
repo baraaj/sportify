@@ -1,14 +1,14 @@
 import React from "react";
-import Footer from "./footer";
-import Navbar from "./navbar";
+import Footer from "../footer/footer";
+import Navbar from "../navbar/navbar";
 import "./clubs.css";
 import { FaSearch } from "react-icons/fa";
 import {BiFilter} from "react-icons/bi"
 import { useInView } from "react-intersection-observer";
 import { useEffect,useState } from "react";
 import { useAnimation } from "framer-motion";
-import img1 from "../images/1.jpg";
-import img2 from "../images/josh-calabrese-zcYRw547Dps-unsplash (1).jpg";
+import img1 from "../../images/1.jpg";
+import img2 from "../../images/josh.jpg";
 
 const Details = () => {
   const [selected, setSelected] = React.useState("");

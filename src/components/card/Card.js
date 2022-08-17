@@ -1,5 +1,5 @@
 import React from 'react';
-import img1 from "../images/1.jpg";
+import img1 from "../../images/1.jpg";
 import './card.css';
 const Card = ({club}) => {
      console.log(club)

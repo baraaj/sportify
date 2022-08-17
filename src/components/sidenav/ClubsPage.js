@@ -1,5 +1,5 @@
 import React from 'react'
-import SideNav from './Sidenav'
+import SideNav from './SideNav';
 import './Sidenav.css';
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
@@ -9,7 +9,7 @@ export default function ClubsPage() {
     
     <div id="wrapper">
 
-    <SideNav / >         
+    <SideNav />         
 
                 <div id="content-wrapper" class="d-flex flex-column">
  

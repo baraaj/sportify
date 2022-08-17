@@ -1,6 +1,4 @@
 import React from 'react'
-
-
 import './contacts.css';
 import {motion} from 'framer-motion';
 export default function Contacts() {

@@ -1,7 +1,8 @@
 import React from 'react';
 import './club.css';
-import img1 from '../images/received_630585981340841-1024x576.jpg';
-import img2 from '../images/Capture.PNG'
+import img1 from '../../images/received_630585981340841-1024x576.jpg';
+import img2 from '../../images/Capture.PNG';
+
 import {IoLocationSharp} from 'react-icons/io5';
 import {BsTelephoneFill} from 'react-icons/bs';
 import {IoIosTime} from 'react-icons/io';
