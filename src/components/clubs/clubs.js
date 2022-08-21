@@ -14,6 +14,8 @@ import Card from '../card/Card';
 import Club from './../club/club';
 
 const Clubs = () => {
+  let list=[];
+  let unique=[];
   const [clbs,setClub]=useState([]);
  const catRef=useRef();
  const [categorie,setCategorie]=useState("");
@@ -37,18 +39,7 @@ const Clubs = () => {
     
   },);
   
-    const getClubByAct=async ()=>{
-     try {
-       const res=await axios.get('/clubs/'
-       
-       );
-      setClub(res.data.clubs);
-       //console.log(clbs);
-       
-     } catch (err) {
-       console.log(err);
-     }
-    };
+ 
     const getClubByReg=async ()=>{
       try {
         const res=await axios.get('/clubs/'
@@ -627,14 +618,28 @@ const kebili =  [
         
       {
         
+      
+        
             //clbs.map((club)=> (
-           clbs.map((club)=>club.activite.map((a,index)=>{
+           clbs.map((club)=> { 
 
-      return(
+
         
-        <Card key={index} act={a}/>   )
+        list.push(club.activite);
+         unique = [...new Set(list)]; 
+          
+         
+         })}
+          
+       {
+       unique.map(a=> <Card act={a} />)
+
+       }
         
-      })) }
+     {/*<Card key={index} act={unique} club={club}/>*/}
+    
+      
+        
         
          
             

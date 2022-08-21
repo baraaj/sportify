@@ -2,8 +2,9 @@ import React from 'react';
 import img1 from "../../images/1.jpg";
 import './card.css';
 import {Link} from 'react-router-dom';
-const Card = ({club,act}) => {
+const Card = ({act}) => {
      
+      
     return (
         <div>
             <section className="clubs-section">
@@ -18,11 +19,11 @@ const Card = ({club,act}) => {
 
                  
                     <div class="card-heading">
-                 {act}
+                   {act}
                     </div>
                     
                   
-                    <Link to="/details" state={{club:club }}>
+                    <Link to="/details" state={{act:act}}>
                     <a class="card-button"> Détails</a>
                     </Link>
                  

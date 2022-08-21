@@ -10,20 +10,42 @@ import { useAnimation } from "framer-motion";
 import img1 from "../../images/1.jpg";
 import img2 from "../../images/josh.jpg";
 import { useLocation } from "react-router-dom";
-
-const Details = () => {
+import axios from "axios"; 
+const Details = ({act}) => {
   const [selected, setSelected] = React.useState("");
   const location = useLocation();
-  const { club } = location.state;
-     
-      /** Function that will set different values to state variable
+const activite = location.state.act;
+     const [clubs,setClubs]=useState([]);
+     console.log(activite)
+     /** Function that will set different values to state variable
        * based on which dropdown is selected
        */
       const changeSelectOptionHandler = (event) => {
         setSelected(event.target.value);
         setfixed();
       };
+      useEffect(()=>{
+        const getClubByAct=async ()=>{
+         try {
+           const res=await axios.get(`/clubs/findact/${activite}`
+           
+           );
+            
+          setClubs(res.data.clubList);
+           
+           //console.log(clbs);
+           
+         } catch (err) {
+           console.log(err);
+         }
+        
+        };
+        getClubByAct();
+       
+     },);
       
+          
+     
       /** Different arrays for different dropdowns */
       const ariana = [
        "Ariana Ville",
@@ -568,18 +590,20 @@ const kebili =  [
           </div>
         </div>
       </form>
-      <section className="clubs-section">
+      
+        {clubs.map(c=>{return(
+          <section className="clubs-section">
         <div class="row">
       <div class="col-lg-4 col-md-4 col-sm-8 offset-xs-1">
                 <div class="card-sl">
                     <div class="card-image">
                         <img
-                            src={img1} />
+                          src={"http://localhost:3000/"+c.logo} />
                     </div>
 
                  
                     <div class="card-heading">
-                       {club.activite}
+                     {c.nom_club}
                     </div>
                     
                   
@@ -590,6 +614,10 @@ const kebili =  [
             </div>
            </div>
       </section>
+
+        )})}
+      
+
     </div>
   );
 };
