@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import Footer from "../footer/footer";
 import Navbar from "../navbar/navbar";
 import "./clubs.css";
@@ -11,18 +11,24 @@ import img1 from "../../images/1.jpg";
 import img2 from "../../images/josh.jpg";
 import axios from "axios";
 import Card from '../card/Card';
+import Club from './../club/club';
 
 const Clubs = () => {
-  const [clubs,setClub]=useState({});
-   
+  const [clbs,setClub]=useState([]);
+ const catRef=useRef();
+ const [categorie,setCategorie]=useState("");
+ const selectHandler=(event)=>{
+  setCategorie(event.target.value);
+ }
   useEffect(()=>{
      const getClubs=async ()=>{
       try {
         const res=await axios.get('/clubs/'
         
         );
-       setClub(res.data);
-        //console.log(res.data);
+       setClub(res.data.clubs);
+        //console.log(clbs);
+        
       } catch (err) {
         console.log(err);
       }
@@ -401,31 +407,7 @@ const kebili =  [
       
       /** This will be used to create set of options that user will see */
       let options = null;
-      /**    <option value="2">Ariana</option>
-                <option value="3">Béja</option>
-                <option value="4">Ben Arous</option>
-                <option value="5">Bizerte</option>
-                <option value="6">Gabès</option>
-                <option value="7">Gafsa</option>
-                <option value="8">Jendouba</option>
-                <option value="9">Kairouan</option>
-                <option value="10">Kasserine</option>
-                <option value="11">Kébili</option>
-                <option value="12">Le Kef</option>
-                <option value="13">Mahdia</option>
-                <option value="14">La Manouba</option>
-                <option value="15">Médenine</option>
-                <option value="16">Monastir</option>
-                <option value="17">Nabeul</option>
-                <option value="18">Sfax</option>
-                <option value="19">Sidi Bouzid</option>
-                <option value="20">Siliana</option>
-                <option value="21">Sousse</option>
-                <option value="22">Tataouine</option>
-                <option value="23">Tozeur</option>
-                <option value="24">Tunis</option>
-                <option value="25">Zaghouan</option> */
-      /** Setting Type variable according to dropdown */
+
       if (selected === "Ariana") {
         type = ariana;
       } else if (selected === "Béja") {
@@ -529,14 +511,15 @@ const kebili =  [
             <div class="row">
               <div class="input-field">
                 <div class="input-select ">
-                  <select data-trigger="" class="form-select"name="choices-single-defaul">
-                    <option placeholder="" value="">Catégorie</option>
+                  <select data-trigger=""onChange={selectHandler} class="form-select"name="choices-single-defaul">
+                    <option placeholder="" value="" ref={catRef}>Catégorie</option>
                     <option>Karaté</option>
                 <option>Judo</option>
                 <option> taekwondo</option>
                 <option>kung fu</option>
                 <option>Gymnastique</option>
                 <option>kickboxing</option>
+                <option>Lutte</option>
                   </select>
                 </div>
               </div>
@@ -602,21 +585,30 @@ const kebili =  [
         </div>
       </form>
       <div className="cards">
-  
+        
+      {
+        
+            clbs.map((club)=> (
+
       
-      </div>
+        <Card club={club} />  
+        
+        ))
+           
+      }
+        
+         
+            
+   
+ 
+       
+
+     
+          </div>
     </div>
+
   );
 };
 
 export default Clubs;
 
-/*     { clubs.map((club,i)=>
-        {
-          console.log( (clubs[i]));
- return(
- [Number(i), clubs[i]]);
- 
-        }
-     
-       )}*/

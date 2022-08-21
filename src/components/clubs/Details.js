@@ -9,10 +9,13 @@ import { useEffect,useState } from "react";
 import { useAnimation } from "framer-motion";
 import img1 from "../../images/1.jpg";
 import img2 from "../../images/josh.jpg";
+import { useLocation } from "react-router-dom";
 
 const Details = () => {
   const [selected, setSelected] = React.useState("");
-  
+  const location = useLocation();
+  const { club } = location.state;
+     
       /** Function that will set different values to state variable
        * based on which dropdown is selected
        */
@@ -576,7 +579,7 @@ const kebili =  [
 
                  
                     <div class="card-heading">
-                       Karaté
+                       {club.activite}
                     </div>
                     
                   

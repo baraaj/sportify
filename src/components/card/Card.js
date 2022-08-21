@@ -1,8 +1,9 @@
 import React from 'react';
 import img1 from "../../images/1.jpg";
 import './card.css';
+import {Link} from 'react-router-dom';
 const Card = ({club}) => {
-     console.log(club)
+     
     return (
         <div>
             <section className="clubs-section">
@@ -17,12 +18,13 @@ const Card = ({club}) => {
 
                  
                     <div class="card-heading">
-                      Karaté
+                 {club.activite}
                     </div>
                     
                   
-                    
-                    <a class="card-button"href="/details"> Détails</a>
+                    <Link to="/details" state={{club:club }}>
+                    <a class="card-button"> Détails</a>
+                    </Link>
                  
                 </div>
             

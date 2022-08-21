@@ -906,5 +906,6 @@ form .btn-search{
     align-items: center;
     justify-content: space-between;
      margin: 20px;
+      flex-wrap: wrap;
      
   }
