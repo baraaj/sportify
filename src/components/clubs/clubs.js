@@ -36,6 +36,45 @@ const Clubs = () => {
      getClubs();
     
   },);
+  
+    const getClubByAct=async ()=>{
+     try {
+       const res=await axios.get('/clubs/'
+       
+       );
+      setClub(res.data.clubs);
+       //console.log(clbs);
+       
+     } catch (err) {
+       console.log(err);
+     }
+    };
+    const getClubByReg=async ()=>{
+      try {
+        const res=await axios.get('/clubs/'
+        
+        );
+       setClub(res.data.clubs);
+        //console.log(clbs);
+        
+      } catch (err) {
+        console.log(err);
+      }
+     };
+     const getClubByGov=async ()=>{
+      try {
+        const res=await axios.get('/clubs/'
+        
+        );
+       setClub(res.data.clubs);
+        //console.log(clbs);
+        
+      } catch (err) {
+        console.log(err);
+      }
+     };
+    
+   
   const[fix,setfix]=useState(false)
   function setfixed(){
  
