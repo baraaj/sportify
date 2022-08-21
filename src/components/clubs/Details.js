@@ -11,19 +11,26 @@ import img1 from "../../images/1.jpg";
 import img2 from "../../images/josh.jpg";
 import { useLocation } from "react-router-dom";
 import axios from "axios"; 
+import ClubCard from "../card/clubCard";
 const Details = ({act}) => {
   const [selected, setSelected] = React.useState("");
   const location = useLocation();
 const activite = location.state.act;
      const [clubs,setClubs]=useState([]);
-     console.log(activite)
+     const [clbs,setClubG]=useState([]);
+     const [gouvernement,setGov]=useState(null);
+     
      /** Function that will set different values to state variable
        * based on which dropdown is selected
        */
       const changeSelectOptionHandler = (event) => {
+        setGov(event.target.value);
         setSelected(event.target.value);
         setfixed();
+        
       };
+      
+    
       useEffect(()=>{
         const getClubByAct=async ()=>{
          try {
@@ -43,8 +50,23 @@ const activite = location.state.act;
         getClubByAct();
        
      },);
+     const getClubByGov=async()=>{
+       
+      try {
+         
+        const res=await axios.get(`/clubs/find/gouvernement/${gouvernement}`
+        
+        );
+       setClubG(res.data);
+        console.log(res.data)
+        
+      } catch (err) {
+        console.log(err);
+      }
+     };
+    
       
-          
+         //getClubByGov() ;
      
       /** Different arrays for different dropdowns */
       const ariana = [
@@ -534,7 +556,7 @@ const kebili =  [
              
               <div class="input-field">
               <div class="input-select">
-                  <select data-trigger=""   onChange={changeSelectOptionHandler} class="form-select"name="choices-single-defaul">
+                  <select data-trigger=""   onChange={changeSelectOptionHandler} class="form-select"name="gouvernement">
                   <option>Gouvernement</option>
                   <option>Ariana</option>
                 <option>Béja</option>
@@ -590,34 +612,13 @@ const kebili =  [
           </div>
         </div>
       </form>
+      <div className="cards">
+        {clubs.map((c,index)=>(
+          
+            <ClubCard key={index} club={c} />
+        ))}
       
-        {clubs.map(c=>{return(
-          <section className="clubs-section">
-        <div class="row">
-      <div class="col-lg-4 col-md-4 col-sm-8 offset-xs-1">
-                <div class="card-sl">
-                    <div class="card-image">
-                        <img
-                          src={"http://localhost:3000/"+c.logo} />
-                    </div>
-
-                 
-                    <div class="card-heading">
-                     {c.nom_club}
-                    </div>
-                    
-                  
-                    
-                    <a class="card-button"href=""> Détails</a>
-                 
-                </div>
-            </div>
-           </div>
-      </section>
-
-        )})}
-      
-
+      </div>
     </div>
   );
 };
