@@ -2,7 +2,7 @@ import React from 'react';
 import img1 from "../../images/1.jpg";
 import './card.css';
 import {Link} from 'react-router-dom';
-const Card = ({club}) => {
+const Card = ({club,act}) => {
      
     return (
         <div>
@@ -18,7 +18,7 @@ const Card = ({club}) => {
 
                  
                     <div class="card-heading">
-                 {club.activite}
+                 {act}
                     </div>
                     
                   

@@ -588,14 +588,14 @@ const kebili =  [
         
       {
         
-            clbs.map((club)=> (
+            //clbs.map((club)=> (
+           clbs.map((club)=>club.activite.map((a,index)=>{
 
-      
-        <Card club={club} />  
+      return(
         
-        ))
-           
-      }
+        <Card key={index} act={a}/>   )
+        
+      })) }
         
          
             
