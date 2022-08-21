@@ -12,14 +12,16 @@ import img2 from "../../images/josh.jpg";
 import { useLocation } from "react-router-dom";
 import axios from "axios"; 
 import ClubCard from "../card/clubCard";
+import { event } from "jquery";
 const Details = ({act}) => {
   const [selected, setSelected] = React.useState("");
   const location = useLocation();
 const activite = location.state.act;
      const [clubs,setClubs]=useState([]);
      const [clbs,setClubG]=useState([]);
+     const [clb,setClubR]=useState([]);
      const [gouvernement,setGov]=useState(null);
-     
+     const [region,setReg]=useState(null);
      /** Function that will set different values to state variable
        * based on which dropdown is selected
        */
@@ -29,6 +31,12 @@ const activite = location.state.act;
         setfixed();
         
       };
+      const regionHandler=(event)=>{
+        setReg(event.target.value);
+        setSelected(event.target.value);
+        setfixed();
+        
+      }
       
     
       useEffect(()=>{
@@ -67,6 +75,19 @@ const activite = location.state.act;
     
       
          //getClubByGov() ;
+         const getClubByReg=async ()=>{
+          try {
+            const res=await axios.get(`/clubs/find/region/${region}`
+            
+            );
+           setClubR(res.data);
+            //console.log(clbs);
+            
+          } catch (err) {
+            console.log(err);
+          }
+         };
+         
      
       /** Different arrays for different dropdowns */
       const ariana = [
@@ -588,7 +609,7 @@ const kebili =  [
               </div>
               <div class="input-field">
                 <div class="input-select">
-                  <select data-trigger="" style={fix?{display:'inline-block'}:{display:'none'}} class="form-select"name="choices-single-defaul">
+                  <select data-trigger="" style={fix?{display:'inline-block'}:{display:'none'}} class="form-select"name="region" onChange={regionHandler}>
                     <option placeholder="" value="">Région</option>
                     {
               /** This is where we have used our options variable */
