@@ -58,6 +58,7 @@ const activite = location.state.act;
         getClubByAct();
        
      },);
+      
      const getClubByGov=async()=>{
        
       try {
@@ -72,10 +73,10 @@ const activite = location.state.act;
         console.log(err);
       }
      };
-    
       
-         //getClubByGov() ;
-         const getClubByReg=async ()=>{
+      
+        getClubByGov() ;
+       /*  const getClubByReg=async ()=>{
           try {
             const res=await axios.get(`/clubs/find/region/${region}`
             
@@ -87,7 +88,7 @@ const activite = location.state.act;
             console.log(err);
           }
          };
-         
+         */
      
       /** Different arrays for different dropdowns */
       const ariana = [

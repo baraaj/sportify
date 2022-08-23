@@ -602,11 +602,13 @@ const kebili =  [
 
         
         list.push(club.activite);
+       
+         
          unique = [...new Set(list)]; 
           
-         
-         })}
           
+         })}
+      
        {
        unique.map(a=> <Card act={a} />)
 
