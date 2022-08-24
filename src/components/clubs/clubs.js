@@ -600,16 +600,16 @@ const kebili =  [
            clbs.map((club)=> { 
 
 
+       // console.log(club)
+       club.activite.map(a=>{list.push(a)})
+          
+       unique = [...new Set(list)];
+         }) }
         
-        list.push(club.activite);
-       
-         
-         unique = [...new Set(list)]; 
-          
-          
-         })}
       
        {
+       
+          
        unique.map(a=> <Card act={a} />)
 
        }
