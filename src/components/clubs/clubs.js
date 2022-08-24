@@ -17,8 +17,10 @@ const Clubs = () => {
   let list=[];
   let unique=[];
   const [clbs,setClub]=useState([]);
+  const [clubs,setClubG]=useState([]);
  const catRef=useRef();
  const [categorie,setCategorie]=useState("");
+ const [gouvernement,setGov]=useState(null);
  const selectHandler=(event)=>{
   setCategorie(event.target.value);
  }
@@ -38,8 +40,31 @@ const Clubs = () => {
      getClubs();
     
   },);
-  
- 
+  const getClubByGov=async()=>{
+       
+    try {
+       
+      const res=await axios.get(`/clubs/find/gouvernement/${gouvernement}`
+      
+      );
+     setClubG(res.data);
+      console.log(res.data)
+      
+    } catch (err) {
+      console.log(err);
+    }
+   };
+    
+    
+     // getClubByGov() ;
+  const getClubByLocation=async()=>{
+    try {
+      
+    } catch (error) {
+      
+    }
+
+  }
     
    
   const[fix,setfix]=useState(false)
@@ -56,6 +81,7 @@ const Clubs = () => {
        */
       const changeSelectOptionHandler = (event) => {
         setSelected(event.target.value);setfixed();
+        setGov(event.target.value);
 
       };
       
@@ -583,7 +609,7 @@ const kebili =  [
                   <span>108 </span>résultats</div>
                 <div class="group-btn">
                   <button class="btn-delete" id="delete">RESET</button>
-                  <button class="btn-search">Rechercher</button>
+                  <button class="btn-search"onClick={getClubByLocation()}>Rechercher</button>
                 </div>
               </div>
             </div>
@@ -614,7 +640,7 @@ const kebili =  [
 
        }
         
-     {/*<Card key={index} act={unique} club={club}/>*/}
+     
     
       
         
