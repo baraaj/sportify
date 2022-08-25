@@ -16,11 +16,13 @@ import Club from './../club/club';
 const Clubs = () => {
   let list=[];
   let unique=[];
+  const[fix,setfix]=useState(false)
   const [clbs,setClub]=useState([]);
-  const [clubs,setClubG]=useState([]);
+  const [clubsG,setClubG]=useState([]);
  const catRef=useRef();
  const [categorie,setCategorie]=useState("");
  const [gouvernement,setGov]=useState(null);
+ const [region,setReg]=useState(null);
  const selectHandler=(event)=>{
   setCategorie(event.target.value);
  }
@@ -43,6 +45,7 @@ const Clubs = () => {
   const getClubByGov=async()=>{
        
     try {
+      
        
       const res=await axios.get(`/clubs/find/gouvernement/${gouvernement}`
       
@@ -53,27 +56,49 @@ const Clubs = () => {
     } catch (err) {
       console.log(err);
     }
+  getClubByGov();
+   };
+   const getClubByReg=async ()=>{
+    try {
+      const res=await axios.get(`/clubs/find/region/${region}`
+      
+      );
+     setClubR(res.data);
+      //console.log(clbs);
+      
+    } catch (err) {
+      console.log(err);
+    }
    };
     
     
-     // getClubByGov() ;
+    
   const getClubByLocation=async()=>{
     try {
+      
       
     } catch (error) {
       
     }
-
-  }
     
+  }
+  
    
-  const[fix,setfix]=useState(false)
+ 
+   
+  
   function setfixed(){
  
     setfix(true);
     //console.log(fix)
   
-  }
+}
+const regionHandler=(event)=>{
+  setReg(event.target.value);
+  setSelected(event.target.value);
+  setfixed();
+  
+}
   const [selected, setSelected] = React.useState("");
   
       /** Function that will set different values to state variable
