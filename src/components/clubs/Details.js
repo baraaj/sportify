@@ -67,7 +67,7 @@ const activite = location.state.act;
         
         );
        setClubG(res.data);
-        console.log(res.data)
+        //console.log(res.data)
         
       } catch (err) {
         console.log(err);
@@ -553,7 +553,7 @@ const kebili =  [
   function setfixed(){
  
     setfix(true);
-    console.log(fix)
+    //console.log(fix)
   
   }
   return (
