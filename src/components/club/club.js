@@ -2,6 +2,8 @@ import React from 'react';
 import './club.css';
 import img1 from '../../images/received_630585981340841-1024x576.jpg';
 import img2 from '../../images/Capture.PNG';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 
 import {IoLocationSharp} from 'react-icons/io5';
 import {BsTelephoneFill} from 'react-icons/bs';
@@ -9,8 +11,25 @@ import {IoIosTime} from 'react-icons/io';
 import { useLocation } from 'react-router-dom';
 export default function Club() {
   const location = useLocation();
+  const[clb,setClub]=useState([]);
 const club = location.state;
-console.log(club)
+console.log(club);
+useEffect(()=>{
+const getClubById=async ()=>{
+  try {
+    const res=await axios.get(`/clubs/${id}`
+    
+    );
+   setClub(res.data.clubs);
+    //console.log(clbs);
+    
+  } catch (err) {
+    console.log(err);
+  }
+ };
+ getClubById();
+
+},);
   return (
     <div class='club'>
     <section>  <h3>Nom club</h3>
