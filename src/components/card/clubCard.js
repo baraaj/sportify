@@ -19,7 +19,7 @@ const ClubCard = ({club}) => {
                     </div>
                     
                   
-                    <Link to="/club" state={{club:club}}>
+                    <Link to={"/club/"+club._id} state={{club:club}}>
                     <a class="card-button"href=""> Détails</a>
                     </Link>
                 </div>

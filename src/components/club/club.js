@@ -6,7 +6,11 @@ import img2 from '../../images/Capture.PNG';
 import {IoLocationSharp} from 'react-icons/io5';
 import {BsTelephoneFill} from 'react-icons/bs';
 import {IoIosTime} from 'react-icons/io';
+import { useLocation } from 'react-router-dom';
 export default function Club() {
+  const location = useLocation();
+const club = location.state;
+console.log(club)
   return (
     <div class='club'>
     <section>  <h3>Nom club</h3>

@@ -19,6 +19,7 @@ const Clubs = () => {
   const[fix,setfix]=useState(false)
   const [clbs,setClub]=useState([]);
   const [clubsG,setClubG]=useState([]);
+  const [clubsR,setClubR]=useState([]);
  const catRef=useRef();
  const [categorie,setCategorie]=useState("");
  const [gouvernement,setGov]=useState(null);
