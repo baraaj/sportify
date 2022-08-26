@@ -567,7 +567,7 @@ const kebili =  [
           <div class="advance-search">
             <span class="desc">Filtre</span>
             <div class="row">
-              <div class="input-field">
+             {/* <div class="input-field">
                 <div class="input-select ">
                   <select data-trigger=""onChange={selectHandler} class="form-select"name="choices-single-defaul">
                     <option placeholder="" value="" ref={catRef}>Catégorie</option>
@@ -580,7 +580,7 @@ const kebili =  [
                 <option>Lutte</option>
                   </select>
                 </div>
-              </div>
+              </div>*/}
               <div class="input-field">
               <div class="input-select">
                   <select data-trigger=""   onChange={changeSelectOptionHandler} class="form-select"name="choices-single-defaul">
