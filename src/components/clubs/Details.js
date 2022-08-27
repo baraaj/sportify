@@ -32,12 +32,18 @@ const activite = location.state.act;
         
       };
       const regionHandler=(event)=>{
+        setSelected(event.target.value);
         setReg(event.target.value);
         setSelected(event.target.value);
         setfixed();
         
       }
+      function setfixed(){
+ 
+        setfix(true);
+        //console.log(fix)
       
+    }
     
       useEffect(()=>{
         const getClubByAct=async ()=>{
@@ -610,7 +616,7 @@ const kebili =  [
               </div>
               <div class="input-field">
                 <div class="input-select">
-                  <select data-trigger="" style={fix?{display:'inline-block'}:{display:'none'}} class="form-select"name="region" onChange={regionHandler}>
+                  <select data-trigger="" style={fix?{display:'inline-block'}:{display:'none'}} class="form-select"name="choices-single-defaul" onChange={regionHandler}>
                     <option placeholder="" value="">Région</option>
                     {
               /** This is where we have used our options variable */
