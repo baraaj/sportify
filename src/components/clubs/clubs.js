@@ -613,8 +613,8 @@ const kebili =  [
                 </div>
               </div>
               
-            </div>
-           <div class="row second"style={fix?{marginBottom:'46px'}:{marginBottom:0}}>
+            
+           
               <div class="input-field">
                 <div class="input-select">
                   <select data-trigger="" style={fix?{display:'inline-block'}:{display:'none'}} class="form-select"name="choices-single-defaul">
@@ -624,12 +624,12 @@ const kebili =  [
               options
             }
                   </select>
-                </div>
+                 
               </div>
             
              
             </div>
-            <div class="row third">
+            <div class="row third"> 
               <div class="input-field">
                 <div class="result-count">
                   <span>108 </span>résultats</div>
@@ -639,6 +639,7 @@ const kebili =  [
                 </div>
               </div>
             </div>
+          </div>
           </div>
         </div>
       </form>

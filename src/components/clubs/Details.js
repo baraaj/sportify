@@ -553,7 +553,7 @@ const kebili =  [
   function setfixed(){
  
     setfix(true);
-    //console.log(fix)
+     
   
   }
   return (
