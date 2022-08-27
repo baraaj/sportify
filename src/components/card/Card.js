@@ -12,10 +12,10 @@ const Card = ({act}) => {
       <div class="col-lg-4 col-md-4 col-sm-8 offset-xs-1">
       
             <div class="card-sl" >
-                    <div class="card-image">
+                 {/*   <div class="card-image">
                         <img
                             src={img1} />
-                    </div>
+    </div>*/}
 
                  
                     <div class="card-heading">
