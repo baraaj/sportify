@@ -28,7 +28,7 @@ function App() {
     <Route path="/details" element={<Details/>} exact />
     <Route path="/events" element={<Events/>} exact />
     <Route path="/admin" element={<Sidenav/>} exact />
-     
+    
     </Routes>
     <Footer/>
     </BrowserRouter>

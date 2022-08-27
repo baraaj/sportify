@@ -93,6 +93,7 @@
     .clubs-section{
       padding: 20px;
      padding-top: 50px;
+     
     }
     @media screen and (max-width: 433px)  {
       .tx{
@@ -104,4 +105,4 @@
     }
     
 }
-    
+ 
