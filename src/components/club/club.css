@@ -145,6 +145,54 @@ padding: 20px;
     
    
   }
+  @media screen and (max-width: 1366px) {
+    .container-club img{
+      
+      height:280px!important;
+      width:30%;
+     left:-60px
+  }
+  .container-club{
+    margin-left: -50px;
+  }
+  .container-club p{
+  
+    font-size: 25px;
+     
+    
+   
+  }
+  .container-club .description {
+ 
+    top:80px;
+     
+     width:60%;
+    
+   }
+  .container-club .description img{
+ 
+   top:-30px;
+   left: 380px;
+    width:50%;
+   
+  }
+  .container-pal{
+    margin-left: -50px;
+  }
+  .container-pal li
+{
+ 
+  padding-left:30px;
+ 
+
+}
+.container-pal li i
+{
+font-size: 45px;
+margin-bottom:50px;
+left:-20px
+}
+  }
   @media screen and (max-width: 999px) {
     .container-club img{
       
@@ -152,6 +200,7 @@ padding: 20px;
       width:60%
       
   }
+  
   .container-club p{
   
     font-size: 25px;
