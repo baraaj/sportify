@@ -65,15 +65,15 @@ const Details = ({props}) => {
         getClubByAct();
        
      },);*/
-     /*const find=()=>{
+     const find=()=>{
     
       axios.get("/clubs/find/"+act+"/"+querygouv+"/"+queryregion)
       .then(response => {
-        //const clubs = response.data;
-        //const act = response.data.clubList;
-       
-         //setact(act);
-      })};*/
+        const clubs = response.data.clubList;
+        const act = response.data.clubList;
+      
+         setact(act);
+      })};
      
       const show=()=>{
         axios.get("/clubs/find/"+act+"/null/null")
@@ -561,7 +561,7 @@ const kebili =  [
     <div className="content-wrapper2">
       <h3 className="tx">Les Clubs</h3>
 
-      <form onSubmit={(e)=>{e.preventDefault()}}>
+      <form onSubmit={(e)=>{e.preventDefault();find()}}>
         <div class="inner-form">
           <div class="basic-search">
             <div class="input-field">
