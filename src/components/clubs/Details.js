@@ -33,10 +33,10 @@ const Details = ({props}) => {
         
       };
       const regionHandler=(event)=>{
-        setSelected(event.target.value);
+         
         setqueryregion(event.target.value)
-        setSelected(event.target.value);
-        setfixed();
+        
+        
         
       }
       function setfixed(){
@@ -65,20 +65,22 @@ const Details = ({props}) => {
         getClubByAct();
        
      },);*/
-     const find=()=>{
+    const find=()=>{
     
       axios.get("/clubs/find/"+act+"/"+querygouv+"/"+queryregion)
       .then(response => {
-        const clubs = response.data.clubList;
-        const act = response.data.clubList;
-         setact(act);
+       
+        const activ = response.data;
+         setact(activ);
+         
+         console.log(response.data)
       
       })};
      
       const show=()=>{
         axios.get("/clubs/find/"+act+"/null/null")
          .then(response => {
-           const act = response.data.clubList;
+           const act = response.data;
            setact(act);
           
            
@@ -638,8 +640,8 @@ const kebili =  [
       <div className="cards">
         
          
-        {console.log(act)}
-        {act !== undefined &&act1.map((c,index)=>{
+        
+        {act !== undefined && act1.map((c,index)=>{
             return( <ClubCard key={index} club={c} />)
         })
 }
