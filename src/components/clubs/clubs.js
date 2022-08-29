@@ -16,74 +16,47 @@ import Club from './../club/club';
 const Clubs = () => {
   let list=[];
   let unique=[];
-  const[fix,setfix]=useState(false)
-  const [clbs,setClub]=useState([]);
+  const[fix,setfix]=useState(false);
+  //const [clubs, setClubs] = React.useState([{clubs:""}]);
+  const [clubs,setClubs]=useState([{clubs:""}]);
   const [clubsG,setClubG]=useState([]);
   const [clubsR,setClubR]=useState([]);
  const catRef=useRef();
  const [categorie,setCategorie]=useState("");
  const [gouvernement,setGov]=useState(null);
  const [region,setReg]=useState(null);
- const selectHandler=(event)=>{
-  setCategorie(event.target.value);
- }
-  useEffect(()=>{
-     const getClubs=async ()=>{
-      try {
-        const res=await axios.get('/clubs/'
+ const [queryregion, setqueryregion] = React.useState(null);
+  const [querygouv, setquerygouv] = React.useState(null);
+
+
+    const find=()=>{
+    
+      axios.get("/clubs/activity/"+querygouv+"/"+queryregion)
+      .then(response => {
+        const clubs = response.data;
         
-        );
-       setClub(res.data.clubs);
-        //console.log(clbs);
+        setClubs(clubs);
         
-      } catch (err) {
-        console.log(err);
-      }
-     };
-     getClubs();
+      })};
+   
     
-  },);
-  const getClubByGov=async()=>{
-       
-    try {
-      
-       
-      const res=await axios.get(`/clubs/find/gouvernement/${gouvernement}`
-      
-      );
-     setClubG(res.data);
-      console.log(res.data)
-      
-    } catch (err) {
-      console.log(err);
-    }
-  getClubByGov();
-   };
-   const getClubByReg=async ()=>{
-    try {
-      const res=await axios.get(`/clubs/find/region/${region}`
-      
-      );
-     setClubR(res.data);
-      //console.log(clbs);
-      
-    } catch (err) {
-      console.log(err);
-    }
-   };
+      const getClubs=async ()=>{
+        try {
+          const res=await axios.get('/clubs/activity/null/null'
+          
+          );
+         setClubs(res.data);
+          
+        } catch (err) {
+          console.log(err);
+        }
+       };
     
-    
-    
-  const getClubByLocation=async()=>{
-    try {
-      
-      
-    } catch (error) {
-      
-    }
-    
-  }
+       useEffect(()=>{
   
+        getClubs();
+       
+      },[]);
    
  
    
@@ -95,9 +68,10 @@ const Clubs = () => {
   
 }
 const regionHandler=(event)=>{
-  setReg(event.target.value);
+ 
   setSelected(event.target.value);
   setfixed();
+  setqueryregion(event.target.value)
   
 }
   const [selected, setSelected] = React.useState("");
@@ -107,7 +81,8 @@ const regionHandler=(event)=>{
        */
       const changeSelectOptionHandler = (event) => {
         setSelected(event.target.value);setfixed();
-        setGov(event.target.value);
+       
+        setquerygouv(event.target.value);
 
       };
       
@@ -552,7 +527,7 @@ const kebili =  [
     <div className="content-wrapper2">
       <h3 className="tx">Les Catégories</h3>
 
-      <form>
+      <form onSubmit={(e)=>{e.preventDefault();find()}} style={{marginLeft:'25%'}}>
         <div class="inner-form">
           <div class="basic-search">
             <div class="input-field">
@@ -635,7 +610,7 @@ const kebili =  [
                   <span>108 </span>résultats</div>
                 <div class="group-btn">
                   <button class="btn-delete" id="delete">RESET</button>
-                  <button class="btn-search"onClick={getClubByLocation()}>Rechercher</button>
+                  <button class="btn-search" type="submit">Rechercher</button>
                 </div>
               </div>
             </div>
@@ -645,12 +620,10 @@ const kebili =  [
       </form>
       <div className="cards">
         
-      {
-        
       
         
-            //clbs.map((club)=> (
-           clbs.map((club)=> { 
+       
+          {/*clbs!== undefined && clbs.map((club)=> { 
 
 
        // console.log(club)
@@ -663,10 +636,38 @@ const kebili =  [
        {
        
           
-       unique.map(a=> <Card act={a} />)
-
-       }
+       unique.map(a=> <Card act={a} />)*/}
+       {console.log(clubs)}
+        <div className="row justify-content-start">
+         {clubs!== undefined && clubs.map((c,index)=>{
+            return( <div className="col-lg-4 col-md-4 col-sm-2 offset-xs-1">
+       
         
+                   <div className="card-sl" >
+                  {/* <div className="card-image">
+                        
+         </div>*/}
+
+                 
+                    <div className="card-heading">
+                     {c.toString()}
+                    </div>
+                    
+                  
+                    
+                    <a className="card-button"href={"/details/"+c}> Détails</a>
+                 
+                </div>
+            </div>)})
+        }
+          
+           
+     
+      
+   
+     
+           
+           </div>
      
     
       
