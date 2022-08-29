@@ -9,16 +9,15 @@ import { useEffect,useState } from "react";
 import { useAnimation } from "framer-motion";
 import img1 from "../../images/1.jpg";
 import img2 from "../../images/josh.jpg";
-import { useLocation } from "react-router-dom";
+import { useLocation,useParams } from "react-router-dom";
 import axios from "axios"; 
 import ClubCard from "../card/clubCard";
 import { event } from "jquery";
-const Details = ({act}) => {
+const Details = () => {
   const [selected, setSelected] = React.useState("");
-  const location = useLocation();
-const activite = location.state.act;
+  const { act } = useParams();
      const [clubs,setClubs]=useState([]);
-     const [act, setact] = React.useState([{act:""}]);
+     const [activite, setact] = React.useState([{activite:""}]);
      const [gouvernement,setGov]=useState(null);
      const [region,setReg]=useState(null);
      const [queryregion, setqueryregion] = React.useState(null);
@@ -47,7 +46,7 @@ const activite = location.state.act;
       
     }
     
-      useEffect(()=>{
+     /* useEffect(()=>{
         const getClubByAct=async ()=>{
          try {
            const res=await axios.get(`/clubs/findact/${activite}`
@@ -65,7 +64,7 @@ const activite = location.state.act;
         };
         getClubByAct();
        
-     },);
+     },);*/
      const find=()=>{
     
       axios.get("/clubs/find/"+act+"/"+querygouv+"/"+queryregion)
@@ -74,6 +73,17 @@ const activite = location.state.act;
         const act = response.data;
          setact(act);
       })};
+      const show=()=>{
+        axios.get("/clubs/find/"+act+"/null/null")
+         .then(response => {
+           const act = response.data;
+           setact(act)
+         })
+    }
+    
+      useEffect(() => {
+      show()
+      }, [act])
       
      
      
@@ -622,7 +632,7 @@ const kebili =  [
         </div>
       </form>
       <div className="cards">
-        {clubs.map((c,index)=>(
+        {act!=="undefined" && activite.map((c,index)=>(
           
             <ClubCard key={index} club={c} />
         ))}
