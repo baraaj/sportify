@@ -22,18 +22,21 @@ const activite = location.state.act;
      const [clb,setClubR]=useState([]);
      const [gouvernement,setGov]=useState(null);
      const [region,setReg]=useState(null);
+     const [queryregion, setqueryregion] = React.useState(null);
+     const [querygouv, setquerygouv] = React.useState(null);
      /** Function that will set different values to state variable
        * based on which dropdown is selected
        */
       const changeSelectOptionHandler = (event) => {
-        setGov(event.target.value);
+        
+        setquerygouv(event.target.value);
         setSelected(event.target.value);
         setfixed();
         
       };
       const regionHandler=(event)=>{
         setSelected(event.target.value);
-        setReg(event.target.value);
+        setqueryregion(event.target.value)
         setSelected(event.target.value);
         setfixed();
         
@@ -64,37 +67,16 @@ const activite = location.state.act;
         getClubByAct();
        
      },);
+     const find=()=>{
+    
+      axios.get("/clubs/find/"+act+"/"+querygouv+"/"+queryregion)
+      .then(response => {
+        const clubs = response.data;
+        const act = response.data;
+         setact(act);
+      })};
       
-     const getClubByGov=async()=>{
-       
-      try {
-         
-        const res=await axios.get(`/clubs/find/gouvernement/${gouvernement}`
-        
-        );
-       setClubG(res.data);
-        //console.log(res.data)
-        
-      } catch (err) {
-        console.log(err);
-      }
-     };
-      
-      
-        getClubByGov() ;
-       /*  const getClubByReg=async ()=>{
-          try {
-            const res=await axios.get(`/clubs/find/region/${region}`
-            
-            );
-           setClubR(res.data);
-            //console.log(clbs);
-            
-          } catch (err) {
-            console.log(err);
-          }
-         };
-         */
+     
      
       /** Different arrays for different dropdowns */
       const ariana = [
