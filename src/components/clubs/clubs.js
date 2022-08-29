@@ -638,6 +638,7 @@ const kebili =  [
           
        unique.map(a=> <Card act={a} />)*/}
        {console.log(clubs)}
+       <section className="clubs-section">
         <div className="row justify-content-start">
          {clubs!== undefined && clubs.map((c,index)=>{
             return( <div className="col-lg-4 col-md-4 col-sm-2 offset-xs-1">
@@ -668,7 +669,7 @@ const kebili =  [
      
            
            </div>
-     
+     </section>
     
       
         
