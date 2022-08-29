@@ -71,8 +71,8 @@ const Details = ({props}) => {
       .then(response => {
         const clubs = response.data.clubList;
         const act = response.data.clubList;
-      
          setact(act);
+      
       })};
      
       const show=()=>{
@@ -628,7 +628,7 @@ const kebili =  [
                   <span>108 </span>résultats</div>
                 <div class="group-btn">
                   <button class="btn-delete" id="delete">RESET</button>
-                  <button class="btn-search">Rechercher</button>
+                  <button type="submit" className="btn-search">Rechercher</button>
                 </div>
               </div>
             </div>
@@ -638,7 +638,7 @@ const kebili =  [
       <div className="cards">
         
          
-        
+        {console.log(act)}
         {act !== undefined &&act1.map((c,index)=>{
             return( <ClubCard key={index} club={c} />)
         })
