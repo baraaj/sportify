@@ -13,11 +13,11 @@ import { useLocation,useParams } from "react-router-dom";
 import axios from "axios"; 
 import ClubCard from "../card/clubCard";
 import { event } from "jquery";
-const Details = () => {
+const Details = ({props}) => {
   const [selected, setSelected] = React.useState("");
   const { act } = useParams();
      const [clubs,setClubs]=useState([]);
-     const [activite, setact] = React.useState([{activite:""}]);
+     const [act1, setact] =useState([]);
      const [gouvernement,setGov]=useState(null);
      const [region,setReg]=useState(null);
      const [queryregion, setqueryregion] = React.useState(null);
@@ -65,25 +65,29 @@ const Details = () => {
         getClubByAct();
        
      },);*/
-     const find=()=>{
+     /*const find=()=>{
     
       axios.get("/clubs/find/"+act+"/"+querygouv+"/"+queryregion)
       .then(response => {
-        const clubs = response.data;
-        const act = response.data;
-         setact(act);
-      })};
+        //const clubs = response.data;
+        //const act = response.data.clubList;
+       
+         //setact(act);
+      })};*/
+     
       const show=()=>{
         axios.get("/clubs/find/"+act+"/null/null")
          .then(response => {
-           const act = response.data;
-           setact(act)
+           const act = response.data.clubList;
+           setact(act);
+          
+           
          })
     }
     
       useEffect(() => {
       show()
-      }, [act])
+      },[act])
       
      
      
@@ -557,7 +561,7 @@ const kebili =  [
     <div className="content-wrapper2">
       <h3 className="tx">Les Clubs</h3>
 
-      <form>
+      <form onSubmit={(e)=>{e.preventDefault()}}>
         <div class="inner-form">
           <div class="basic-search">
             <div class="input-field">
@@ -632,14 +636,16 @@ const kebili =  [
         </div>
       </form>
       <div className="cards">
-        {act!=="undefined" && activite.map((c,index)=>(
-          
-            <ClubCard key={index} club={c} />
-        ))}
-      
-      </div>
-    </div>
-  );
+        
+         
+        
+        {act !== undefined &&act1.map((c,index)=>{
+            return( <ClubCard key={index} club={c} />)
+        })
+}
+</div>
+  </div> 
+ );
 };
 
 export default Details;
