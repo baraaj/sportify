@@ -18,8 +18,7 @@ const Details = ({act}) => {
   const location = useLocation();
 const activite = location.state.act;
      const [clubs,setClubs]=useState([]);
-     const [clbs,setClubG]=useState([]);
-     const [clb,setClubR]=useState([]);
+     const [act, setact] = React.useState([{act:""}]);
      const [gouvernement,setGov]=useState(null);
      const [region,setReg]=useState(null);
      const [queryregion, setqueryregion] = React.useState(null);
