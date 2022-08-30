@@ -5,13 +5,55 @@
 .events{
     overflow-x: hidden;
 }
-
+.addbutton {
+    color: #ffffff;
+    float:right;
+    position:relative;
+    margin-top: 40px;
+    margin-bottom:20px;
+    right:20px;
+    cursor:pointer;
+    background-color: #85D236;
+    border-color: transparent;
+    border-radius: 20px;
+    width:150px;
+    height:40px
+} 
+.homebutton {
+    color: #ffffff;
+    float:right;
+    position:relative;
+    margin-top: 40px;
+    margin-bottom:20px;
+    right:20px;
+    cursor:pointer;
+    background-color: #85D236;
+    border-color: transparent;
+    border-radius: 20px;
+    border-radius: 25px;
+    background-color: #85D236;
+    width:180px;
+    
+    font-family: 'Libre Baskerville', serif;
+    font-size: 25px;
+    font-weight: 300;
+  
+    border-color: transparent;
+    text-decoration: none;
+    text-align:center;display:block;
+}
+.homebutton:hover {
+    color: #ffffff;
+  
+    text-decoration: none;
+  
+}
 .news h3{
     margin-left:70px;
    padding-top: 50px;
    color: #fff;
    font-size: 40px;
-   font-family: 'Libre Baskerville', serif;
+   
 }
 .news .article{
     height: 320px;
@@ -45,8 +87,6 @@
     max-width: 40%;
     padding-left:60px;
     font-weight: 700;
-    text-transform: uppercase;
-    font-family: 'Libre Baskerville', serif;
     color:#000
   
 }
@@ -58,8 +98,6 @@
    
     padding:60px;
     font-weight: 700;
-    text-transform: uppercase;
-    font-family: 'Libre Baskerville', serif;
 }
 .title span{
     color:#85D236;
@@ -98,8 +136,6 @@
     max-width: 30%;
     padding-right:60px;
     font-weight: 700;
-    text-transform: uppercase;
-    font-family: 'Libre Baskerville', serif;
     max-width:40%;
     
 }
@@ -111,8 +147,7 @@
    
     padding:60px;
     font-weight: 700;
-    text-transform: uppercase;
-    font-family: 'Libre Baskerville', serif;
+
 }
 .title2 span{
     color:#85D236;
@@ -146,7 +181,6 @@
    padding-top: 50px;
    color: #fff;
    font-size: 40px;
-   font-family: 'Libre Baskerville', serif;
 }
 .events .title{
     position:absolute;
@@ -157,8 +191,7 @@
     padding:20px;
   
     font-weight: 900;
-    text-transform: uppercase;
-    font-family:'Bebas Neue';
+   
 }
 .events .title span{
     color:#85D236;
