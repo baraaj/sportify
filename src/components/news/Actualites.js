@@ -15,10 +15,10 @@ export default function Actualites() {
     .then(response => {
       const news1 = response.data[0];
       setnews1(news1)
-   console.log(news1)
+   
       const news2 = response.data[1];
-      setnews1(news2)
-      console.log(news2)
+      setnews2(news2)
+      
   })};
   const{ref, inView}=useInView({
     threshold:0.2
