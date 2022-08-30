@@ -8,10 +8,10 @@ import { useEffect } from 'react';
 import {useAnimation} from 'framer-motion'
 import axios from 'axios';
 export default function Actualites() {
-  const [news1, setnews1] = React.useState([{id: 0}]);
-  const [news2, setnews2] = React.useState([{id: 0}]);
+  const [news1, setnews1] = React.useState([]);
+  const [news2, setnews2] = React.useState([]);
   const show=()=>{
-    axios.get("http://localhost:3000/api/news/")
+    axios.get("/news/")
     .then(response => {
       const news1 = response.data[0];
       setnews1(news1)
@@ -52,7 +52,7 @@ className='article'>
 <motion.div 
 animate={animation} 
  className='article2'>
-<img src={"http://localhost:3000/uploadsnews/"+news2.Image} className="image2"/>
+<img src={"http://localhost:3000/"+news2.Image} className="image2"/>
 <p className='title2'><span>{news2.Titre}</span> 
 {news2.Description}
 </p>
