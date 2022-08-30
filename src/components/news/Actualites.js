@@ -15,10 +15,10 @@ export default function Actualites() {
     .then(response => {
       const news1 = response.data[0];
       setnews1(news1)
-   
+   console.log(news1)
       const news2 = response.data[1];
       setnews1(news2)
-     
+      console.log(news2)
   })};
   const{ref, inView}=useInView({
     threshold:0.2
@@ -45,7 +45,7 @@ if (inView){
 animate={animation}  
 className='article'>
   
-<img src={"http://localhost:3000/uploadsnews/"+news1.Image} className="image col-md-5 col-xs-3 col-xs-offset-1"/>
+<img src={"http://localhost:3000/"+news1.Image} className="image col-md-5 col-xs-3 col-xs-offset-1"/>
 <p className='title'><span>{news1.Titre}</span> {news1.Description}</p>
 
 </motion.div>
