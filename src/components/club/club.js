@@ -35,7 +35,8 @@ const getClubById=async ()=>{
 },);
   return (
     <div className='club'>
-    <section>  <h3>{clb.nom_club}</h3>
+    <section className='club-details col-md-12 col-sm-8'> 
+    <h3>{clb.nom_club}</h3>
 <div className='container-club'>
     <img src={"http://localhost:3000/"+clb.logo}></img> 
     <p className='details col-md-4 col-sm-4'>
@@ -52,12 +53,12 @@ const getClubById=async ()=>{
         <li><span><IoIosTime/></span>{clb.temps!==undefined &&clb.temps.map(cc=>{return cc.jour.toString()+" "+cc.horaire.toString()})}</li></ul>
     </p>  {console.log(clb.temps)}
     <p className='description'>
-   <span><IoLocationSharp/></span> 
+   {/*<span><IoLocationSharp/></span> 
     Lorem ipsum dolor sit 
 amet, consectetur adipiscing
  elit. In fringilla ante mauris
 , et pulvinar eros blandit sed. Fusce con
-gue efficitur placerat. Donec mattis.
+      gue efficitur placerat. Donec mattis.*/}
 <img src={img2}/>
    </p>
   
