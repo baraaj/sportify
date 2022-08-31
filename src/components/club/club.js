@@ -35,31 +35,31 @@ const getClubById=async ()=>{
 },);
   return (
     <div className='club'>
-    <section className='club-details col-md-12 col-sm-8'> 
-    <h3>{clb.nom_club}</h3>
+    <section>  <h3>{clb.nom_club}</h3>
 <div className='container-club'>
-    <img src={"http://localhost:3000/"+clb.logo}></img> 
+    <img src={"http://localhost:3000/"+clb.logo}alt="logo"></img> 
     <p className='details col-md-4 col-sm-4'>
        <ul> <li>{
           clb.activite !== undefined &&clb.activite.map((n)=>{
             return(<div><span><BiCategoryAlt/></span>{n}</div>)
           })
-        }</li></ul>
+        }</li>
+        </ul>
         </p>
   
     <p className='details'>
        <ul> <li><span><IoLocationSharp/></span>{clb.emplacement+" "+clb.region+" "+clb.gouvernement}</li>
         <li><span><BsTelephoneFill/></span>{clb.num_tel!==undefined && clb.num_tel.map(n=>{return(n.toString())})} </li>
-        <li><span><IoIosTime/></span>{clb.temps!==undefined &&clb.temps.map(cc=>{return cc.jour.toString()+" "+cc.horaire.toString()})}</li></ul>
-    </p>  {console.log(clb.temps)}
+        <li><span><IoIosTime/></span>{clb.temps!==undefined &&clb.temps.map(cc=>{return cc.jour.toString()+" "+cc.horaire.toString()+"\r"})}</li></ul>
+    </p>
     <p className='description'>
-   {/*<span><IoLocationSharp/></span> 
+   <span><IoLocationSharp/></span> 
     Lorem ipsum dolor sit 
 amet, consectetur adipiscing
  elit. In fringilla ante mauris
 , et pulvinar eros blandit sed. Fusce con
-      gue efficitur placerat. Donec mattis.*/}
-<img src={img2}/>
+gue efficitur placerat. Donec mattis.
+<img src={img2} alt="localisation"/>
    </p>
   
 </div> </section>
