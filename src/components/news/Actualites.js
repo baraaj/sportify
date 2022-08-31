@@ -45,7 +45,7 @@ if (inView){
 animate={animation}  
 className='article'>
   
-<img src={"http://localhost:3000/"+news1.Image} className="image col-md-5 col-xs-3 col-xs-offset-1"/>
+<img src={"http://localhost:3000/uploadsnews/"+news1.Image} className="image col-md-5 col-xs-3 col-xs-offset-1"/>
 <p className='title'  style={{padding:"20px",top:"-40px",textAlign:"center"}}><span>{news1.Titre}</span>
 
 
@@ -55,7 +55,7 @@ className='article'>
 <motion.div 
 animate={animation} 
  className='article2'>
-<img src={"http://localhost:3000/"+news2.Image} className="image2"/>
+<img src={"http://localhost:3000/uploadsnews/"+news2.Image} className="image2"/>
 <p className='title2'style={{padding:"20px",top:"-10px",textAlign:"center"}}><span>{news2.Titre}</span> 
 <div style={{fontSize:"16px"}}> {news2.Description}</div>
 </p>

@@ -14,7 +14,7 @@ export default function Events() {
     .then(response => {
       const events = response.data[0];
       setevents(events)
-      console.log(events)
+     
   
   })};
     const{ref, inView}=useInView({
@@ -42,8 +42,8 @@ animate={animation} className="article">
        
             <img className="image" src={"http://localhost:3000/uploadsevent/"+events.Image}/>
 <p className="title" style={{top:"-50px"}}><span style={{padding:"20px",textAlign:"center"}}>{events.Titre}</span><br/>  
-<span style={{fontSize:"20px",color:"grey",textAlign:"left"}}>{events.Date}</span><br/>{events.Horaire}
-<div style={{fontSize:"16px",color:"black"}}>{events.Description}</div>
+<span style={{fontSize:"20px",color:"grey",marginLeft:"300px"}}>{events.Date}</span><br/>{events.Horaire}
+<div style={{fontSize:"16px",color:"black",padding:"5px",marginLeft:"-150px"}}>{events.Description}</div>
 </p>
             
         </motion.div>

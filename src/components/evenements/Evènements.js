@@ -93,7 +93,7 @@ export default function Events() {
                               <div className="col-sm-4">
                                 <div className="rotate-img">
                                   <img
-                                    src={"http://localhost:3000/"+n.Image}
+                                    src={"http://localhost:3000/uploadsnews/"+n.Image}
                                     alt="banner"
                                     className="img-fluid"
                                   />
