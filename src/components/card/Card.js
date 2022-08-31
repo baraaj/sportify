@@ -8,23 +8,23 @@ const Card = ({act}) => {
     return (
         <div>
             <section className="clubs-section">
-        <div class="row justify-content-start">
-      <div class="col-lg-4 col-md-4 col-sm-8 offset-xs-1">
+        <div className="row justify-content-start">
+      <div className="col-lg-4 col-md-4 col-sm-8 offset-xs-1">
       
-            <div class="card-sl" >
+            <div className="card-sl" >
                  {/*   <div class="card-image">
                         <img
                             src={img1} />
     </div>*/}
 
                  
-                    <div class="card-heading">
+                    <div className="card-heading">
                    {act}
                     </div>
                     
                   
                     <Link to="/details" state={{act:act}}>
-                    <a class="card-button"> Détails</a>
+                    <a className="card-button"> Détails</a>
                     </Link>
                  
                 </div>

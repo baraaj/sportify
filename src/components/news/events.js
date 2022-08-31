@@ -13,7 +13,7 @@ export default function Events() {
     .then(response => {
       const events = response.data[0];
       setevents(events)
-      console.log(events)
+      
   
   })};
     const{ref, inView}=useInView({

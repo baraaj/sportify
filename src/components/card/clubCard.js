@@ -5,22 +5,22 @@ const ClubCard = ({club}) => {
     return (
         <div className='cards'>
            <section className="clubs-section">
-        <div class="row">
-      <div class="col-lg-4 col-md-4 col-sm-8 offset-xs-1">
-                <div class="card-sl">
-                    <div class="card-image">
+        <div className="row">
+      <div className="col-lg-4 col-md-4 col-sm-8 offset-xs-1">
+                <div className="card-sl">
+                    <div className="card-image">
                         <img
                           src={"http://localhost:3000/"+club.logo} />
                     </div>
 
                  
-                    <div class="card-heading">
+                    <div className="card-heading">
                      {club.nom_club}
                     </div>
                     
                   
                     <Link to={"/club/"+club._id} state={{club:club}}>
-                    <a class="card-button"href=""> Détails</a>
+                    <a className="card-button"href=""> Détails</a>
                     </Link>
                 </div>
             </div>
