@@ -46,15 +46,18 @@ animate={animation}
 className='article'>
   
 <img src={"http://localhost:3000/"+news1.Image} className="image col-md-5 col-xs-3 col-xs-offset-1"/>
-<p className='title'><span>{news1.Titre}</span> {news1.Description}</p>
+<p className='title'  style={{padding:"20px",top:"-40px",textAlign:"center"}}><span>{news1.Titre}</span>
+
+
+<div style={{fontSize:"16px"}}> {news1.Description}</div></p>
 
 </motion.div>
 <motion.div 
 animate={animation} 
  className='article2'>
 <img src={"http://localhost:3000/"+news2.Image} className="image2"/>
-<p className='title2'><span>{news2.Titre}</span> 
-{news2.Description}
+<p className='title2'style={{padding:"20px",top:"-10px",textAlign:"center"}}><span>{news2.Titre}</span> 
+<div style={{fontSize:"16px"}}> {news2.Description}</div>
 </p>
 
 </motion.div>
