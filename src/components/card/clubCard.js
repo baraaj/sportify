@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+ 
 const ClubCard = ({club}) => {
-    
     return (
         <div className='cards'>
            <section className="clubs-section">

@@ -911,6 +911,16 @@ form .btn-search{
      align-items: center;
      
   }
+  .cardc{
+    display: flex;
+    margin-left: -50px;
+    margin-right:60px;
+    padding: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+     align-items: center;
+     
+  }
   @media screen and (max-width:1366px) {
    
 
@@ -936,7 +946,8 @@ form .btn-search{
     padding: 10px 80px 10px 15px;
   }
   form .inner-form  {
-    margin-right: 150px ;
+    margin-left: 90px ;
+   
     width:70%
   }
     form .inner-form .basic-search .input-field input {

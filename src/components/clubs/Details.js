@@ -637,7 +637,7 @@ const kebili =  [
           </div>
         </div>
       </form>
-      <div className="cards">
+      <div className="cardc">
         
          
         
