@@ -645,10 +645,7 @@ const kebili =  [
        
         
                    <div className="card-sl" >
-                   <div className="card-image">
-                        
-                        </div>
-
+                   
                  
                     <div className="card-heading">
                      {c.toString()}
