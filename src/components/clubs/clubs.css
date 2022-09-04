@@ -904,10 +904,11 @@ form .btn-search{
   }
   .cards{
     display: flex;
-    align-items: center;
+    
     justify-content: space-between;
-     margin: 20px;
+     margin-left: 120px;
       flex-wrap: wrap;
+     align-items: center;
      
   }
   @media screen and (max-width:1366px) {
@@ -1074,5 +1075,6 @@ form .btn-search{
   }
   .clubs-section{
     padding: 120px;
+    
   }
 
