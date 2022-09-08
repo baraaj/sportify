@@ -41,10 +41,10 @@ export default function Events() {
 animate={animation} className="article">
        
             <img className="image" src={"http://localhost:3000/uploadsevent/"+events.Image}/>
-<p className="title" style={{top:"-50px"}}><span style={{padding:"20px",textAlign:"center"}}>{events.Titre}</span><br/>  
-<span style={{fontSize:"20px",color:"grey",marginLeft:"300px"}}>{events.Date}</span><br/>{events.Horaire}
+<div className="title" style={{top:"-50px"}}><p style={{padding:"20px",}}>{events.Titre}</p> 
+<span style={{fontSize:"20px",color:"grey",marginLeft:"300px"}}>{events.Date}</span><br/>{events.Horaire===null &&events.Horaire}
 <div style={{fontSize:"16px",color:"black",padding:"5px",marginLeft:"-150px"}}>{events.Description}</div>
-</p>
+</div>
             
         </motion.div>
         <motion.div initial={{x:'-100vw'}}

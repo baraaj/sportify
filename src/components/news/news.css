@@ -400,3 +400,26 @@
       
         
     }
+    @media (max-width:1366px){
+ 
+        .article .title{
+            font-size: 20px;
+            top:-30px
+        }
+     
+        .article2 .title2{
+            font-size: 18px;
+           top:20px
+        }
+        .events .title{
+         
+            font-size: 18px;
+            left:40%;
+            display:inline-block;
+            color: #85D236;
+            width: 100%;
+          
+        }
+      
+        
+    }
