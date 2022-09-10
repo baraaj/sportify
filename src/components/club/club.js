@@ -48,7 +48,7 @@ const getClubById=async ()=>{
         </p>
   
     <p className='details'>
-       <ul> <li><span><IoLocationSharp/></span>{clb.emplacement+" "+clb.region+" "+clb.gouvernement}</li>
+       <ul> <li><span><IoLocationSharp/></span>{clb.emplacement}<br/>{" "+clb.region+"  "+clb.gouvernement}</li>
         <li><span><BsTelephoneFill/></span>{clb.num_tel!==undefined && clb.num_tel.map(n=>{return(n.toString())})} </li>
         <li><span><IoIosTime/></span>{clb.temps!==undefined &&clb.temps.map(cc=>{return cc.jour.toString()+" "+cc.horaire.toString()+"\r"})}</li></ul>
     </p>
